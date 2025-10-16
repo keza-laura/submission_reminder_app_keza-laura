@@ -55,6 +55,11 @@ Chinemerem, Shell Navigation, not submitted
 Chiagoziem, Git, submitted
 Divine, Shell Navigation, not submitted
 Anissa, Shell Basics, submitted
+Kevin, Git, not submitted
+liza, Shell Navigation, submitted
+Nana, Git, submitted
+Adore, Shell Basics, not submitted
+Loli, Shell Basics, not submitted
 
 EOL
 
