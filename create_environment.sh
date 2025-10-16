@@ -11,17 +11,22 @@ mkdir -p $main/config
 cat > "$main/app/reminder.sh" << 'EOF'
 #!/bin/bash
 
-# Source environment variables and helper functions
-source ./config/config.env
-source ./modules/functions.sh
+# Get the directory where this script is located
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Path to the submissions file
-submissions_file="./assets/submissions.txt"
+# Source environment variables and helper functions (relative to script location)
+source "$BASE_DIR/../config/config.env"
+source "$BASE_DIR/../modules/functions.sh"
+
+# Path to the submissions file (relative to script location)
+submissions_file="$BASE_DIR/../assets/submissions.txt"
 
 # Print remaining time and run the reminder function
 echo "Assignment: $ASSIGNMENT"
 echo "Days remaining to submit: $DAYS_REMAINING days"
 echo "--------------------------------------------"
+
+#check_submissions "$submissions_file"
 
 EOF
 
